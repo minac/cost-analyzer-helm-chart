@@ -29,7 +29,8 @@ spec:
 {{- end }}
 {{- if .Values.networkCosts.resources }}
         resources:
-{{ toYaml .Values.networkCosts.resources | indent 10 }}
+          requests:
+{{ toYaml .Values.networkCosts.resources | indent 12 }}
 {{- end }}
         env:
         - name: NODE_NAME
